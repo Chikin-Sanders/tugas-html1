@@ -100,86 +100,35 @@ header img {
     border-radius: 50%;
     width: 250px;
 }
-
-/* Informasi */
-.informasiUtama {
+/* konten */
+.photos {
     margin: 0 auto;
+    padding: 5px;
 }
-#konten {
-    width: 100%;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-}
-#mainInfo {
-    width: 75%;
-}
-#sideBars {
-    width: 25%;
-    vertical-align: text-top;
-}
-#konten .container{
-    padding: 0 5px;
-}
-
-#konten td {
-    border: 1px solid #ddd;
-    padding: px;
-}
-
-/* Masukan */
-.container.masukan{
+.imageCards {
+    margin: 5px;
     padding: 10px;
-    border-radius: 0px 0px 15px 15px;
-    background-color: #f2f2f2;
-    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-gap: 10px;
 }
-.masukan input[type=text], textarea, select {
-    width: 90%;
-    padding: 12px;
-    border-radius: 4px;
-    resize: vertical;
+.imageCards > img {
+    max-width: 100%;
+    transition:transform 0.25s ease;
 }
-.masukan label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
+.imageCards > img:first-child {
+    grid-area: 1 / 1 / span 3 / span 3;
 }
-.masukan input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
+.imageCards > img:nth-child(4) {
+    grid-area: 1 / 6 / span 2 / span 2;
+}
+.imageCards > img:hover {
+    background-color: rgba(170, 168, 168, 0.6);
     cursor: pointer;
 }
-.masukan input[type=submit]:hover {
-    background-color: #45a049;
-    position: relative;
-    bottom: 5px;
-    box-shadow: 0px 2px 1px rgba(48, 48, 48, 50);
-}
-.masukan input[type=submit]:active {
-    position: relative;
-    top: 5px;
-    box-shadow: none;
-}
-.masukan .col-25{
-    float: left;
-    width: 25%;
-    margin-top: 6px;
-}
-.masukan .col-75{
-    float: left;
-    width: 75%;
-    margin-top: 6px;
-}
-.masukan .row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-.masukan .row:last-child {  
-    padding-top: 10px;
-    text-align: right;
+.imageCards > img:active {
+    -webkit-transform:scale(1.5);
+    transform:scale(2);
 }
 /* footer */
 footer {
